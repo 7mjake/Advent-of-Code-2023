@@ -9,44 +9,35 @@ import Foundation
 
 func day01_part1() {
     
-//    var directPuzzleInput: String? = nil // declaring puzzleInput here
-//    
-//    if let filePath = Bundle.main.path(forResource: "day01_testInput", ofType: "txt", inDirectory: "day01") {
-//        do {
-//            directPuzzleInput = try String(contentsOfFile: filePath, encoding: .utf8)
-//        } catch {
-//            print("Error: \(error)")
-//        }
-//    } else {
-//        print("File path could not be found.")
-//        return
-//    }
-    
     let directPuzzleInput = getInput(filename: "day01/day01_realInput.txt")
-
     
-    let puzzleInput = directPuzzleInput.components(separatedBy: "\n\n").map {
-        $0.components(separatedBy: "\n").compactMap { Int($0) }
-    }
+    let puzzleInput = directPuzzleInput.components(separatedBy: "\n")
+        .filter { !$0.isEmpty }
+        .map {$0.map {Character(extendedGraphemeClusterLiteral: $0)}}
     
     print(puzzleInput)
     
-    var mostCalsElf: Int = -1
-    var mostCals = 0
+    var values: [Int] = []
     
-    for (index, elf) in puzzleInput.enumerated() {
+    for line in puzzleInput {
+        var currentPair = ""
+        for char in line {
+            if char.isNumber {
+                if currentPair.count == 2 {
+                    let indexToRemove = currentPair.index(currentPair.startIndex, offsetBy: 1)
+                    currentPair.remove(at: indexToRemove)
+                }
+                currentPair.append(char)
+            }
+        }
         
-        var calTotal = 0
-        for item in elf {
-            calTotal = calTotal + item
+        if currentPair.count == 1 {
+            currentPair.append(currentPair)
         }
-        print("elf #\(index + 1) has \(calTotal) calories")
-        if calTotal > mostCals {
-            mostCals = calTotal
-            mostCalsElf = index + 1
-        }
+        
+        print(currentPair)
+        values.append(Int(currentPair)!)
     }
-    
-    print("elf #\(mostCalsElf) has the most at \(mostCals) calories")
+    print(values.reduce(0, +))
     
 }
