@@ -9,7 +9,8 @@ import Foundation
 
 func day01_part2() {
     
-    let directPuzzleInput = getInput(filename: "day01/day01_part02_testInput.txt")
+    let filename = "day01/day01_part02_testInput_v2.txt"
+    let directPuzzleInput = getInput(filename: filename)
     
     let puzzleInput = directPuzzleInput.components(separatedBy: "\n")
         .filter { !$0.isEmpty }
@@ -52,7 +53,7 @@ func day01_part2() {
 
 // REPLACED SPELLED OUT NUMBERS WITH INTS
 func findNumbers(line: String) -> String {
-    let numbers = ["one": "1","two": "2","three": "3","four": "4","five": "5","six": "6","seven": "7","eight": "8","nine": "9"]
+    let numbers = ["one": "on1ne","two": "tw2wo","three": "thre3hree","four": "fou4our","five": "fiv5ive","six": "si6ix","seven": "seve7even","eight": "eigh8ight","nine": "nin9ine"]
     var fixedLine = line
     
     var looping = true
