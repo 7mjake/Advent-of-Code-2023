@@ -22,7 +22,7 @@ func day01_part1() {
 //        return
 //    }
     
-    let directPuzzleInput = getInput(filename: "day01/day01_testInput.txt")
+    let directPuzzleInput = getInput(filename: "day01/day01_realInput.txt")
 
     
     let puzzleInput = directPuzzleInput.components(separatedBy: "\n\n").map {

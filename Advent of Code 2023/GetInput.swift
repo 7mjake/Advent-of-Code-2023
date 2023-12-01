@@ -7,14 +7,20 @@
 
 import Foundation
 
+enum FileError: Error {
+    case fileNotFound
+    case unableToReadContents
+}
+
 func getInput(filename: String) -> String {
-    let filePath = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-        .appendingPathComponent(filename)
     
-    if FileManager.default.fileExists(atPath: filePath.path) {
-            return try! String(contentsOf: filePath, encoding: .utf8)
+    let sourceFileURL = URL(fileURLWithPath: #filePath)
+        let directoryURL = sourceFileURL.deletingLastPathComponent()
+        let fileURL = directoryURL.appendingPathComponent(filename)
+    
+    if let content = try? String(contentsOf: fileURL, encoding: .utf8) {
+            return content
         } else {
-            print("File not found")
-            return String("")
+            fatalError("Failed to read the file: \(filename)")
         }
 }
