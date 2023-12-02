@@ -9,7 +9,7 @@ import Foundation
 
 func day01_part2() {
     
-    let filename = "day01/day01_part02_testInput_v2.txt"
+    let filename = "day01/day01_realInput.txt"
     let directPuzzleInput = getInput(filename: filename)
     
     let puzzleInput = directPuzzleInput.components(separatedBy: "\n")

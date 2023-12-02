@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9619F07D2B1B8AF000562AA2 /* day02_part1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619F07C2B1B8AF000562AA2 /* day02_part1.swift */; };
 		968C48292B1A777500F414E2 /* day01_part2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968C48282B1A777500F414E2 /* day01_part2.swift */; };
 		968E753E2B1A1683001EC253 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E753D2B1A1683001EC253 /* main.swift */; };
 		968E75492B1A16F1001EC253 /* GetInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E75482B1A16F1001EC253 /* GetInput.swift */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9619F07C2B1B8AF000562AA2 /* day02_part1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day02_part1.swift; sourceTree = "<group>"; };
+		9619F07E2B1B8B0400562AA2 /* day02_testInput.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day02_testInput.txt; sourceTree = "<group>"; };
 		968C481D2B1A1A9400F414E2 /* day01_realInput.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day01_realInput.txt; sourceTree = "<group>"; };
 		968C481E2B1A1A9400F414E2 /* day01_testInput.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day01_testInput.txt; sourceTree = "<group>"; };
 		968C48282B1A777500F414E2 /* day01_part2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day01_part2.swift; sourceTree = "<group>"; };
@@ -49,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9619F07B2B1B8ADB00562AA2 /* day02 */ = {
+			isa = PBXGroup;
+			children = (
+				9619F07C2B1B8AF000562AA2 /* day02_part1.swift */,
+				9619F07E2B1B8B0400562AA2 /* day02_testInput.txt */,
+			);
+			path = day02;
+			sourceTree = "<group>";
+		};
 		968E75312B1A1683001EC253 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +82,7 @@
 			children = (
 				968E753D2B1A1683001EC253 /* main.swift */,
 				968E75482B1A16F1001EC253 /* GetInput.swift */,
+				9619F07B2B1B8ADB00562AA2 /* day02 */,
 				968E75442B1A1692001EC253 /* day01 */,
 			);
 			path = "Advent of Code 2023";
@@ -150,6 +163,7 @@
 				968E75492B1A16F1001EC253 /* GetInput.swift in Sources */,
 				968E754A2B1A17D4001EC253 /* day01_part1.swift in Sources */,
 				968C48292B1A777500F414E2 /* day01_part2.swift in Sources */,
+				9619F07D2B1B8AF000562AA2 /* day02_part1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
