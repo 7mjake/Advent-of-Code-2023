@@ -14,7 +14,7 @@ struct Game {
 
 func day02_part1() {
     
-    let directPuzzleInput = getInput(filename: "day02/day02_testInput.txt")
+    let directPuzzleInput = getInput(filename: "day02/day02_realInput.txt")
     
     let puzzleInput = directPuzzleInput.components(separatedBy: "\n")
         .filter { !$0.isEmpty }
@@ -27,7 +27,41 @@ func day02_part1() {
         return parseGame(game: game)
     }
     
-    print(parsedGames)
+//    print(parsedGames)
+    var passingGames = [Int]()
+    
+    let maxRed = 12
+    let maxGreen = 13
+    let maxBlue = 14
+    
+    parsedGames.forEach { game in
+        
+        var gameMaxRed = 0
+        var gameMaxBlue = 0
+        var gameMaxGreen = 0
+        
+        game.rounds.forEach { round in
+            round.forEach { draw in
+                if draw.key == "red" && draw.value > gameMaxRed {
+                    gameMaxRed = draw.value
+                }
+                if draw.key == "blue" && draw.value > gameMaxBlue {
+                    gameMaxBlue = draw.value
+                }
+                if draw.key == "green" && draw.value > gameMaxGreen {
+                    gameMaxGreen = draw.value
+                }
+            }
+        }
+        
+        if gameMaxRed <= maxRed && gameMaxGreen <= maxGreen && gameMaxBlue <= maxBlue {
+            passingGames.append(game.gameNum)
+        }
+        
+    }
+    
+    print(passingGames)
+    print(passingGames.reduce(0, +))
     
 }
 
@@ -50,7 +84,7 @@ func parseGame(game: String) -> Game {
         return(draw)
     }
     
-    var newGame = Game(gameNum: gameNum, rounds: rounds)
+    let newGame = Game(gameNum: gameNum, rounds: rounds)
     
 //    print(newGame)
     return newGame

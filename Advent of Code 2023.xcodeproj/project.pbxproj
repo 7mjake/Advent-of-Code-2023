@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		9619F07C2B1B8AF000562AA2 /* day02_part1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day02_part1.swift; sourceTree = "<group>"; };
 		9619F07E2B1B8B0400562AA2 /* day02_testInput.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day02_testInput.txt; sourceTree = "<group>"; };
+		9619F07F2B1BA0A300562AA2 /* day02_realInput.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day02_realInput.txt; sourceTree = "<group>"; };
 		968C481D2B1A1A9400F414E2 /* day01_realInput.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day01_realInput.txt; sourceTree = "<group>"; };
 		968C481E2B1A1A9400F414E2 /* day01_testInput.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day01_testInput.txt; sourceTree = "<group>"; };
 		968C48282B1A777500F414E2 /* day01_part2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day01_part2.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 			children = (
 				9619F07C2B1B8AF000562AA2 /* day02_part1.swift */,
 				9619F07E2B1B8B0400562AA2 /* day02_testInput.txt */,
+				9619F07F2B1BA0A300562AA2 /* day02_realInput.txt */,
 			);
 			path = day02;
 			sourceTree = "<group>";
