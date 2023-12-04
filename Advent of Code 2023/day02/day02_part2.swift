@@ -1,5 +1,5 @@
 //
-//  day02_part02.swift
+//  day02_part2.swift
 //  Advent of Code 2023
 //
 //  Created by Jake Martin on 12/2/23.
@@ -24,10 +24,6 @@ func day02_part2() {
     
 //    print(parsedGames)
     var gamePowers = [Int]()
-    
-    let maxRed = 12
-    let maxGreen = 13
-    let maxBlue = 14
     
     parsedGames.forEach { game in
         

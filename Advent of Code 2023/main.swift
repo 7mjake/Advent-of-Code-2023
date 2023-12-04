@@ -7,4 +7,4 @@
 
 import Foundation
 
-day02_part2()
+day03_part1()
